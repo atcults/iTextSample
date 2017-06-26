@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bee1c2bf-512b-4a06-a6b9-27b22e1069c6.csv" />
+    <None Remove="logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bee1c2bf-512b-4a06-a6b9-27b22e1069c6.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="3.0.0-chi05" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.3.0" />
+    <PackageReference Include="MathParser.org-mXparser" Version="4.0.0.2" />
+  </ItemGroup>
+
+</Project>
