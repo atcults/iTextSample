@@ -4,6 +4,7 @@ using System.IO;
 using CsvHelper;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using org.mariuszgromada.math.mxparser;
 
 namespace C2CPrint
 {
@@ -14,9 +15,14 @@ namespace C2CPrint
 
         static void Main(string[] args)
         {
+            FormulaValidator.ValidateContractFormula();
+
+            if(args.Length == 0) return;
+
             var fileId = args.Length == 0 ? "bee1c2bf-512b-4a06-a6b9-27b22e1069c6" : args[0];
 
             if (!File.Exists($"{fileId}.csv")) return;
+
 
             var watch = new Stopwatch();
 
